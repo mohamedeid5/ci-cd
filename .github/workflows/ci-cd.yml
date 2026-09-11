@@ -23,6 +23,8 @@ jobs:
       - name: check composer version
         run: composer --version
 
+      - name: install php dependencies
+        run: composer install --no-interaction --perfer-dist
 
 
 
