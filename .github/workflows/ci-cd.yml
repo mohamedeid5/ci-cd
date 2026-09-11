@@ -24,7 +24,7 @@ jobs:
         run: composer --version
 
       - name: install php dependencies
-        run: composer install --no-interaction --perfer-dist
+        run: composer install --no-interaction --prefer-dist
 
 
 
