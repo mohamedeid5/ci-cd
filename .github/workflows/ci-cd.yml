@@ -26,5 +26,10 @@ jobs:
       - name: install php dependencies
         run: composer install --no-interaction --prefer-dist
 
+      - name: prepare Laravel
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
 
 
