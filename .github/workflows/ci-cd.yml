@@ -2,6 +2,7 @@ name: Laravel CI
 
 on:
   push:
+  pull_reauest:
 
 jobs:
   test:
