@@ -21,7 +21,7 @@ jobs:
         run: php -v
 
       - name: check composer version
-        run: composer -version
+        run: composer --version
 
 
 
