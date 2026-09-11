@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Hello World
         uses: actions/checkout@v4
-      - name: Hello World
-        run: echo "Hello World"
-      - name: show files
-        run: ls
+      - name: run multiple commands
+        run: |
+          ls
+          pwd
+          ls -la
