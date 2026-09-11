@@ -1,16 +1,27 @@
-name: First Workflow
+name: Laravel CI
 
 on:
-  push:
+  push
 
 jobs:
-  hello:
+  test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Hello World
+      - name: checkout code
         uses: actions/checkout@v4
-      - name: run multiple commands
-        run: |
-          ls
-          pwd
-          ls -la
+
+      - name: setup php
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.4"
+          tools: composer:v2
+      - name: check php version
+        run: php -v
+
+      - name: check composer version
+        run: composer -version
+
+
+
+
